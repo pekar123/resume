@@ -1,0 +1,154 @@
+<div>
+  <main>
+    <div>
+      <h1><span
+          class='badge text-bg-primary'
+        >{{name}}</span></h1>
+    </div>
+    <br />
+
+    <span class='placeholder col-12 placeholder-xs'></span>
+    <br />
+
+    {{#each users}}
+      <div>
+        <br />
+        <h3><span
+            class='badge text-bg-secondary'
+          >Users</span></h3>
+      </div>
+      <div>
+        <div class='alert alert-info' role='alert'>
+          <p><b>ID:</b>
+            {{id}}
+          </p>
+          <p><b>Name:</b>
+            {{name}}
+          </p>
+          <p><b>Gender:</b>
+            {{gender}}
+          </p>
+          <p><b>Age:</b>
+            {{age}}
+          </p>
+        </div>
+      </div>
+      {{#each friends}}
+        <div>
+          <div>
+            <h3><span
+                class='badge text-bg-success'
+              >Friends</span></h3>
+          </div>
+          <div class='alert alert-light' role='alert'>
+            <div>
+              <p><b>ID:</b>
+                {{id}}
+              </p>
+              <p><b>Name:</b>
+                {{name}}
+              </p>
+              <p><b>Gender:</b>
+                {{gender}}
+              </p>
+              <p><b>Age:</b>
+                {{age}}
+              </p>
+            </div>
+          </div>
+
+          {{#each mutual_friends}}
+
+            <div>
+              <div>
+                <h4><span
+                    class='badge text-bg-danger'
+                  >Mutual friends</span></h4>
+              </div>
+
+              <div class='alert alert-warning' role='alert'>
+                <div>
+                  <small>
+                    <p><b>ID:</b>
+                      {{id}}
+                    </p>
+                    <p><b>Name:</b>
+                      {{name}}
+                    </p>
+                    <p><b>Gender:</b>
+                      {{gender}}
+                    </p>
+                    <p><b>Age:</b>
+                      {{age}}
+                    </p>
+                  </small>
+                </div>
+              </div>
+
+            </div>
+
+          {{/each}}
+          <span
+            class='placeholder col-12 placeholder-lg'
+          ></span>
+        </div>
+        <br />
+
+        {{#each groups}}
+          <div>
+            <div>
+              <span
+                class='badge text-bg-warning'
+              >Groups</span>
+            </div>
+
+            <div class='alert alert-success' role='alert'>
+              <h5>Id:
+                <span
+                  class='badge bg-secondary'
+                >{{id}}</span></h5>
+              <h5>Name:
+                <span
+                  class='badge bg-secondary'
+                >{{name}}</span></h5>
+              <h5><b>Description:</b>
+                {{description}}</h5>
+            </div>
+
+            {{#each members}}
+              <div>
+                <div>
+                  <span
+                    class='badge text-bg-info'
+                  >Members</span>
+                </div>
+                <div
+                  class='alert alert-danger'
+                  role='alert'
+                >
+                  <small>
+                    <p><b>ID:</b>
+                      {{id}}
+                    </p>
+                    <p><b>Name:</b>
+                      {{name}}
+                    </p>
+                    <p><b>Gender:</b>
+                      {{gender}}
+                    </p>
+                    <p><b>Age:</b>
+                      {{age}}
+                    </p>
+                  </small>
+                </div>
+
+              </div>
+            {{/each}}
+
+          </div>
+        {{/each}}
+      {{/each}}
+
+    {{/each}}
+  </main>
+</div>
