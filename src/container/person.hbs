@@ -3,7 +3,7 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
  }}
 
-<div>
+<main class='p-5'>
   <section>
     {{#with person}}
     <div>
@@ -73,28 +73,28 @@
           <div>
         <hr>
         {{#each employees}}
-        <div>
+        <div class="p-3">
           <p><b>Name:</b> {{name}}</p>
           <p><b>Position:</b> {{position}}</p>
           <p><b>Department:</b> {{department}}</p>
 
         </div>
-        <br>
+        
         <hr>
-        <div>
+        <div class="p-3">
            {{#each projects }}
            <p><b>Name:</b>{{name}}</p>
            <p><b>Description:</b>{{description}}</p>
            <p><b>Status:</b>{{status}}</p>
          <div>
-        <br>
+        
         <hr>
           {{#each teams}}
           <p>{{team_name}}</p>
        
         <hr>
 
-        <div>
+        <div class="p-3">
            {{#with team_leader}}
           <p><b>{{name}}</b></p>
           <p>{{title}}</p>
@@ -102,7 +102,7 @@
           {{/with}} 
         </div>
 
-         <br>
+         
          <hr>
          <div>
           {{#each team_members }}
@@ -117,18 +117,20 @@
             </ul>
           </div>
 
-          <dir>
+          <div class="p-3">
+            <dir>
             {{#each projects}}
             <p>{{name}}</p>
             <p>{{description}}</p>
-          <div>
+          <div >
             <ul>
               {{#each technologies }}
               <div>{{this}}</div>
               {{/each}}
             </ul>
           </div>
-            <br>
+          </div>
+            
             <hr>
           <div>
           
@@ -163,14 +165,12 @@
 
         {{/each}}
 
-      
-
-      
     </div>
    </section>
-</div>
+   {{/with}}
+</main>
 
-  {{/with}}
+  
 
 
 {{! 

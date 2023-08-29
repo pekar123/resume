@@ -49,7 +49,7 @@ router.get('/', function (req, res) {
 router.get('/summary', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('summary', {
-    // ↙ сюди вводимо JSON дані
+    layout: 'basic',
 
     page: {
       title: 'Resume | Summary',
@@ -84,7 +84,7 @@ router.get('/summary', function (req, res) {
 
 router.get('/skills', function (req, res) {
   res.render('skills', {
-    // ↙ сюди вводимо JSON дані
+    layout: 'basic',
 
     page: {
       title: 'Resume | Skills ',
@@ -148,7 +148,7 @@ router.get('/skills', function (req, res) {
 
 router.get('/education', function (req, res) {
   res.render('education', {
-    // ↙ сюди вводимо JSON дані
+    layout: 'basic',
 
     page: {
       title: 'Resume',
@@ -206,7 +206,7 @@ router.get('/education', function (req, res) {
 router.get('/work', function (req, res) {
   res.render('work', {
     // ↙ сюди вводимо JSON дані
-    layout: 'big',
+    layout: 'basic',
     page: {
       title: 'Resume | Work',
     },
@@ -267,7 +267,7 @@ router.get('/work', function (req, res) {
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
-    layout: 'person',
+    layout: 'basic',
     person: {
       name: 'Emma Johnson',
       age: 32,
