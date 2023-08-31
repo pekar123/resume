@@ -1,12 +1,12 @@
 <main class='p-5 mt-0'>
 
   {{#with navigation}}
-    <div class='nav-link'>
-      <div class='row'>
+    <div class="nav">
+      <div >
         <hr />
         {{#each links}}
-          <div class='col-1'>
-            <a href='{{href}}'>
+          <div class='col-1 nav-item'>
+            <a href='{{href}}' class="nav-link">
               {{text}}</a>
           </div>
         {{/each}}
@@ -17,11 +17,10 @@
             aria-disabled='true'
           >Disabled</a>
         </div>
-
+        <hr />
       </div>
-      <hr />
-
     </div>
+    
   {{/with}}
 
   {{#with newsBlock}}
