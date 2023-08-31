@@ -1,7 +1,7 @@
-{{! 
-Це код container файлу для index сторінки, 
+{{!
+Це код container файлу для index сторінки,
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
- }}
+}}
 
 <main class='p-5'>
   <section>
@@ -20,35 +20,36 @@
     <div>
       <address>
         {{#with address}}
-          <em>
-            {{street}}/
-            {{city}}/
-            {{state}}/
-            {{zip}}/
-            {{country}}</em>
+        <em>
+          {{street}}/
+          {{city}}/
+          {{state}}/
+          {{zip}}/
+          {{country}}
+        </em>
         {{/with}}
       </address>
     </div>
     <hr />
-      </section>
+  </section>
 
-   <section>
-     <div>
+  <section>
+    <div>
       <ul>
         {{#each education}}
         <li>
           <div>{{degree}}</div>
-          <div>{{major}}</div> 
+          <div>{{major}}</div>
           <div>{{university}}</div>
-          <div>{{graduationYear}}</div>  
+          <div>{{graduationYear}}</div>
         </li>
       </ul>
       {{/each}}
 
-     </div>
-   </section>
+    </div>
+  </section>
 
-   <section>
+  <section>
     <div>
       <ul>
         {{#each workExperience }}
@@ -61,16 +62,16 @@
           </div>
         </li>
       </ul>
-            <ul>
-              {{#each responsibilities }}
-              <div>{{this}}</div>
-              {{/each}}
-            </ul>
-            <div>{{year_founded}}</div>
-            <hr>
-            <div>{{industry}}</div>
+      <ul>
+        {{#each responsibilities }}
+        <div>{{this}}</div>
+        {{/each}}
+      </ul>
+      <div>{{year_founded}}</div>
+      <hr>
+      <div>{{industry}}</div>
 
-          <div>
+      <div>
         <hr>
         {{#each employees}}
         <div class="p-3">
@@ -79,101 +80,103 @@
           <p><b>Department:</b> {{department}}</p>
 
         </div>
-        
+
         <hr>
         <div class="p-3">
-           {{#each projects }}
-           <p><b>Name:</b>{{name}}</p>
-           <p><b>Description:</b>{{description}}</p>
-           <p><b>Status:</b>{{status}}</p>
-         <div>
-        
-        <hr>
-          {{#each teams}}
-          <p>{{team_name}}</p>
-       
-        <hr>
-
-        <div class="p-3">
-           {{#with team_leader}}
-          <p><b>{{name}}</b></p>
-          <p>{{title}}</p>
-          <p>Email:<em> {{email}}</em></p>
-          {{/with}} 
-        </div>
-
-         
-         <hr>
-         <div>
-          {{#each team_members }}
-          <p>{{name}}</p>
-          <h4>{{title}}</h4>
-          <p>Email:<Em>{{email}}</Em></p>
+          {{#each projects }}
+          <p><b>Name:</b>{{name}}</p>
+          <p><b>Description:</b>{{description}}</p>
+          <p><b>Status:</b>{{status}}</p>
           <div>
-            <ul>
-              {{#each skills }}
-              <li>{{this}}</li>
-              {{/each}}
-            </ul>
-          </div>
 
-          <div class="p-3">
-            <dir>
-            {{#each projects}}
-            <p>{{name}}</p>
-            <p>{{description}}</p>
-          <div >
-            <ul>
-              {{#each technologies }}
-              <div>{{this}}</div>
-              {{/each}}
-            </ul>
-          </div>
-          </div>
-            
             <hr>
-          <div>
-          
-          <p>
-            {{team_members.0.name}}/
-            {{team_members.0.title}}
-          </p>
-          <p>
-            {{team_members.1.name}}/
-            {{team_members.1.title}}
-          </p>
-          
-          </div>
+            {{#each teams}}
+            <p>{{team_name}}</p>
 
+            <hr>
+
+            <div class="p-3">
+              {{#with team_leader}}
+              <p><b>{{name}}</b></p>
+              <p>{{title}}</p>
+              <p>Email:<em> {{email}}</em></p>
+              {{/with}}
+            </div>
+
+
+            <hr>
+            <div>
+              {{#each team_members }}
+              <p>{{name}}</p>
+              <h4>{{title}}</h4>
+              <p>Email:<Em>{{email}}</Em></p>
+              <div>
+                <ul>
+                  {{#each skills }}
+                  <li>{{this}}</li>
+                  {{/each}}
+                </ul>
+              </div>
+
+              <div class="p-3">
+                <dir>
+                  {{#each projects}}
+                  <p>{{name}}</p>
+                  <p>{{description}}</p>
+                  <div>
+                    <ul>
+                      {{#each technologies }}
+                      <div>{{this}}</div>
+                      {{/each}}
+                    </ul>
+                  </div>
+              </div>
+
+              <hr>
+              <div>
+
+                <p>
+                  {{team_members.0.name}}/
+                  {{team_members.0.title}}
+                </p>
+                <p>
+                  {{team_members.1.name}}/
+                  {{team_members.1.title}}
+                </p>
+
+              </div>
+
+
+              {{/each}}
+              </dir>
+
+
+              {{/each}}
+            </div>
 
             {{/each}}
-          </dir>
 
+          </div>
 
           {{/each}}
-         </div>
- 
-          {{/each}}
-
-        </div>
-
-           {{/each}}
         </div>
 
         {{/each}}
       </div>
 
-        {{/each}}
+      {{/each}}
 
     </div>
-   </section>
-   {{/with}}
+  </section>
+  {{/with}}
 </main>
 
-  
 
 
-{{! 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
-}}
+
+{{!
+Цей код містить лише те, що буде виводитись в
+
+<body>
+  Адже наш layout/default.hbs має вже структуру HTML
+  }}
