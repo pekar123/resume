@@ -1,0 +1,47 @@
+<div class='card'>
+  <div class='row g-0'>
+    <div class='col-2 p-3 mt-2'>
+      <img
+        src={{image}}
+        class='img-fluid rounded-start'
+        alt='...'
+      />
+    </div>
+    <div class='col-4'>
+      <div class='card-body'>
+        <h5 class='card-title'>{{name}}</h5>
+        <p class='card-text'>{{description}}</p>
+
+      </div>
+    </div>
+    <div class='col-2 mt-4'>
+      <div class='card-body'>
+        {{#with price}}
+          <p class='card-title'>{{title}}</p>
+          <h5 class='card-text'>{{value}}</h5>
+        {{/with}}
+      </div>
+    </div>
+    <div class='col-2 mt-5'>
+      <div class='card-body'>
+        <p class='card-text'>{{amount}}</p>
+      </div>
+    </div>
+    <div class='col-2'>
+      <div class='card-body'>
+        {{#each buttons}}
+          <div class='mb-3 mt-2'>
+            {{#if isPrimary}}
+              <button class='btn btn-primary'>
+                {{text}}</button>
+            {{/if}}
+            {{#if isDanger}}
+              <button class='btn btn-outline-danger'>
+                {{text}}</button>
+            {{/if}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
