@@ -14,63 +14,73 @@
 
   {{#with purchase}}
     <ul class='nav nav-tabs'>
-      {{#each tabs}}   
+      {{#each tabs}}
         {{#if @first}}
-        <li>
-            <a href="{{link}}" class="nav-link active">{{text}}</a>
-        </li>
+          <li>
+            <a href='' class='nav-link active'>{{this}}</a>
+          </li>
         {{else}}
-        <li>
-          <a href="{{link}}" class="nav-link">{{text}}</a>
-        </li>
+          <li>
+            <a href='' class='nav-link'>{{this}}</a>
+          </li>
         {{/if}}
       {{/each}}
     </ul>
 
-    <div>
-      {{#with actionBlock}}
-        <div class='row mt-5 mb-4'>
-          <div class='col-10'>
-            {{#with input}}
-              <div class='col-4'>
-                <input
-                  type='text'
-                  class='form-control'
-                  placeholder='{{placeholder}}'
-                />
-              </div>
-            {{/with}}
-
-            {{#each buttons}}
-            <div class="co-6">
-                
-              {{#if isSuccess}}
-                <a
-                  href='{{link}}'
-                  class='btn btn-success'
-                >{{text}}</a>
-              {{/if}}
-              {{#if isOutline}}
-                <a
-                  href='{{link}}'
-                  class='btn btn-outline-success'
-                >{{text}}</a>
-              {{/if}}
-              {{#if isDanger}}
-                <a
-                  href='{{link}}'
-                  class='btn btn-danger'
-                >{{text}}</a>
-              {{/if}}
+    {{#with actionBlock}}
+      <div class='row mt-5 mb-4'>
+        <div class='col-4'>
+          {{#with input}}
+            <div class=''>
+              <input
+                type='text'
+                class='form-control'
+                placeholder='{{placeholder}}'
+              />
             </div>
 
-
-            {{/each}}
-          
+          {{/with}}
         </div>
 
-      {{/with}}
-    </div>
+        {{#each buttons}}
+
+          {{#if isSuccess}}
+            <div class='col-1 ms-3'>
+              <a
+                href='{{link}}'
+                class='btn btn-success'
+              >{{text}}</a>
+            </div>
+
+          {{/if}}
+
+          {{#if isOutline}}
+            <div class='col-2 ms-3'>
+              <a
+                href='{{link}}'
+                class='btn btn-outline-success'
+              >{{text}}</a>
+            </div>
+          {{/if}}
+
+          {{#if isDanger}}
+            <div class='col-2 me-3'>
+              <a
+                href='{{link}}'
+                class='btn btn-danger'
+              >{{text}}</a>
+            </div>
+          {{/if}}
+
+        {{/each}}
+      </div>
+    {{/with}}
+    <hr />
+
+    {{#each itemList}}
+    {{> purchaseItem}}
+    {{/each}}
+    <hr />
 
   {{/with}}
 
