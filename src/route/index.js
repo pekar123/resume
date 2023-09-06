@@ -3312,6 +3312,44 @@ router.get('/shopcatalog', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+router.get('/homepage', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('homepage', {
+    layout: 'index',
+    name: 'Андрій Черкасенко',
+    description:
+      'Моя робота і те як я можу проявити себе в майбутньому',
+    buttons: [
+      {
+        text: 'ShopHome',
+        link: 'http://localhost:3000/shophome',
+      },
+      {
+        text: 'ShopCart',
+        link: 'http://localhost:3000/shopcart',
+      },
+      {
+        text: 'ShopCatalog',
+        link: 'http://localhost:3000/shopcatalog',
+      },
+      {
+        text: 'ShopOrder',
+        link: 'http://localhost:3000/shoporder',
+      },
+      {
+        text: 'ShopProfile',
+        link: 'http://localhost:3000/shopprofile',
+      },
+      {
+        text: 'ShopReveiew',
+        link: 'http://localhost:3000/shopreview',
+      },
+    ],
+  })
+})
+
 // ================================================================
 
 // ================================================================
