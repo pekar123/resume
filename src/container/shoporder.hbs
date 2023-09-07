@@ -1,20 +1,14 @@
-<main class='p-5'>
+<main class='m-5'>
 
-  <div class='row'>
-    <hr />
-    <div class='nav'>
-      {{#with navigation}}
-      <div class='col-3 nav-link'>
-        {{#each links}}
-        <a href='{{href}}' class='nav-item'>
-          {{text}}</a>
-        {{/each}}
-
-      </div>
-      {{/with}}
+  {{#with navigation}}
+  <hr>
+    <div class='nav-link'>
+      {{#each links}}
+        <a href='{{href}}' class='px-3'>{{text}}</a>
+      {{/each}}
     </div>
-    <hr />
-  </div>
+    <hr>
+  {{/with}}
 
   <div class='mt-5'>
     <h1>{{header}}</h1>
@@ -349,15 +343,23 @@
         {{/with}}
         <hr>
 
-        <div class="nav">
-          {{#each footer}}
-          <div class="nav-item col-2">
-            {{#each this}}
-             <a href="{{link}}" class="nav-link">{{text}}</a>
-            {{/each}}
-          </div>
-           {{/each}}
-        </div>
-      </div>
+        
     </div>
+  </div>
+  <div class="row">
+    <div class='nav mt-5'>
+      {{#each footer}}
+      <div class='nav-item col-2 ms-4 '>
+        {{#each this}}
+          <div >
+            <a
+            href='{{link}}'
+            class='btn btn-link'
+          >{{text}}</a>
+          </div>
+        {{/each}}
+      </div>
+    {{/each}}
+    </div>
+  </div>
 </main>

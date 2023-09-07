@@ -10,12 +10,22 @@
 
       {{#each buttons}}
 
-        <div class='mt-2'>
-          <a
-            href='{{link}}'
-            class='btn btn-primary'
-          >{{text}}</a>
-        </div>
+        {{#if isStart}}
+          <div class='mt-2'>
+            <a
+              href='{{link}}'
+              class='btn btn-outline-warning'
+            >{{text}}</a>
+          </div>
+        {{else}}
+          <div class='mt-2'>
+            <a
+              href='{{link}}'
+              class='btn btn-primary'
+            >{{text}}</a>
+          </div>
+
+        {{/if}}
 
       {{/each}}
 

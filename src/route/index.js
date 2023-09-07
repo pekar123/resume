@@ -1255,7 +1255,7 @@ router.get('/task31', function (req, res) {
       cards: [
         {
           picture: {
-            src: 'https://picsum.photos/400/200',
+            src: 'https://picsum.photos/400/250',
             alt: 'New York',
           },
           title: 'New York City',
@@ -3324,27 +3324,84 @@ router.get('/homepage', function (req, res) {
     buttons: [
       {
         text: 'ShopHome',
-        link: 'http://localhost:3000/shophome',
+        link: '/shophome',
+        isStart: false,
       },
       {
         text: 'ShopCart',
-        link: 'http://localhost:3000/shopcart',
+        link: '/shopcart',
+        isStart: false,
       },
       {
         text: 'ShopCatalog',
-        link: 'http://localhost:3000/shopcatalog',
+        link: '/shopcatalog',
+        isStart: false,
       },
       {
         text: 'ShopOrder',
-        link: 'http://localhost:3000/shoporder',
+        link: '/shoporder',
+        isStart: false,
       },
       {
         text: 'ShopProfile',
-        link: 'http://localhost:3000/shopprofile',
+        link: '/shopprofile',
+        isStart: false,
       },
       {
         text: 'ShopReveiew',
-        link: 'http://localhost:3000/shopreview',
+        link: '/shopreview',
+        isStart: false,
+      },
+
+      {
+        text: 'Web',
+        link: '/web',
+        isStart: true,
+      },
+      {
+        text: 'Task21',
+        link: '/task21',
+        isStart: true,
+      },
+      {
+        text: 'Task22',
+        link: '/task22',
+        isStart: true,
+      },
+      {
+        text: 'Task31',
+        link: '/task31',
+        isStart: true,
+      },
+      {
+        text: 'Skills',
+        link: '/skills',
+        isStart: true,
+      },
+      {
+        text: 'Person',
+        link: '/person',
+        isStart: true,
+      },
+      {
+        text: 'Mac',
+        link: '/mac',
+        isStart: true,
+      },
+      {
+        text: 'Facebook',
+        link: '/facebook',
+        isStart: true,
+      },
+      {
+        text: 'Car',
+        link: '/car',
+        isStart: true,
+      },
+      {
+        text: 'Bio',
+        link: '/bio',
+        isStart: true,
       },
     ],
   })

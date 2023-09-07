@@ -45,22 +45,26 @@
     </div>
     <div class='row'>
       {{#each cards}}
-        <div class='card col-5'>
+        <div class='card col-5 mb-3 mx-1'>
           {{#with picture}}
-            <img
-              src='{{src}}'
-              class='card-img-top'
-              alt='{{alt}}'
-            />
+            <div class='mt-2'>
+              <img
+                src='{{src}}'
+                class='card-img-top'
+                alt='{{alt}}'
+              />
+            </div>
           {{/with}}
           <div class='card-body'>
             <h5 class='card-title'>{{title}}</h5>
             <p class='card-text'>{{description}}</p>
             {{#with button}}
-              <a
-                href='{{href}}'
-                class='btn btn-primary'
-              >{{text}}</a>
+              <div class='row mt-3'>
+                <a
+                  href='{{href}}'
+                  class='btn btn-primary'
+                >{{text}}</a>
+              </div>
             {{/with}}
           </div>
         </div>
@@ -211,16 +215,18 @@
         <h5>{{title}}</h5>
       </div>
       <div class='row'>
-        <div class='col-3'>
+        <div class='col-4'>
           {{#each navigation}}
-            <a
-              href='{{href}}'
-              class='btn btn-link'
-            >{{text}}</a>
+            <div class='col-4'>
+              <a
+                href='{{href}}'
+                class='btn btn-link'
+              >{{text}}</a>
+            </div>
           {{/each}}
         </div>
 
-        <div class='col-3'>
+        <div class='col-4'>
           {{#each socialMedia}}
             <div class='card'>
               <a
@@ -230,7 +236,7 @@
             </div>
           {{/each}}
         </div>
-        <div class='col-3'>
+        <div class='col-4'>
           {{#each partners}}
             <div class='card'>
               <a
