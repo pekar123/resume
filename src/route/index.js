@@ -39,8 +39,95 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
+  res.render('index', {
+    layout: 'index',
+    name: 'Андрій Черкасенко',
+    description:
+      'Моя робота і те як я можу проявити себе в майбутньому',
+    buttons: [
+      {
+        text: 'ShopHome',
+        link: '/shophome',
+        isStart: false,
+      },
+      {
+        text: 'ShopCart',
+        link: '/shopcart',
+        isStart: false,
+      },
+      {
+        text: 'ShopCatalog',
+        link: '/shopcatalog',
+        isStart: false,
+      },
+      {
+        text: 'ShopOrder',
+        link: '/shoporder',
+        isStart: false,
+      },
+      {
+        text: 'ShopProfile',
+        link: '/shopprofile',
+        isStart: false,
+      },
+      {
+        text: 'ShopReveiew',
+        link: '/shopreview',
+        isStart: false,
+      },
+
+      {
+        text: 'Web',
+        link: '/web',
+        isStart: true,
+      },
+      {
+        text: 'Task21',
+        link: '/task21',
+        isStart: true,
+      },
+      {
+        text: 'Task22',
+        link: '/task22',
+        isStart: true,
+      },
+      {
+        text: 'Task31',
+        link: '/task31',
+        isStart: true,
+      },
+      {
+        text: 'Skills',
+        link: '/skills',
+        isStart: true,
+      },
+      {
+        text: 'Person',
+        link: '/person',
+        isStart: true,
+      },
+      {
+        text: 'Mac',
+        link: '/mac',
+        isStart: true,
+      },
+      {
+        text: 'Facebook',
+        link: '/facebook',
+        isStart: true,
+      },
+      {
+        text: 'Car',
+        link: '/car',
+        isStart: true,
+      },
+      {
+        text: 'Bio',
+        link: '/bio',
+        isStart: true,
+      },
+    ],
+  })
 })
 
 // ================================================================
@@ -1255,7 +1342,7 @@ router.get('/task31', function (req, res) {
       cards: [
         {
           picture: {
-            src: 'https://picsum.photos/400/200',
+            src: 'https://picsum.photos/400/250',
             alt: 'New York',
           },
           title: 'New York City',
@@ -3310,44 +3397,6 @@ router.get('/shopcatalog', function (req, res) {
     ],
   })
   //                  ↑↑ сюди вводимо JSON дані
-})
-
-router.get('/homepage', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('homepage', {
-    layout: 'index',
-    name: 'Андрій Черкасенко',
-    description:
-      'Моя робота і те як я можу проявити себе в майбутньому',
-    buttons: [
-      {
-        text: 'ShopHome',
-        link: 'http://localhost:3000/shophome',
-      },
-      {
-        text: 'ShopCart',
-        link: 'http://localhost:3000/shopcart',
-      },
-      {
-        text: 'ShopCatalog',
-        link: 'http://localhost:3000/shopcatalog',
-      },
-      {
-        text: 'ShopOrder',
-        link: 'http://localhost:3000/shoporder',
-      },
-      {
-        text: 'ShopProfile',
-        link: 'http://localhost:3000/shopprofile',
-      },
-      {
-        text: 'ShopReveiew',
-        link: 'http://localhost:3000/shopreview',
-      },
-    ],
-  })
 })
 
 // ================================================================

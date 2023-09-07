@@ -1,13 +1,14 @@
 <main class='m-5'>
 
   {{#with navigation}}
+  <hr>
     <div class='nav-link'>
       {{#each links}}
         <a href='{{href}}' class='px-3'>{{text}}</a>
       {{/each}}
     </div>
+    <hr>
   {{/with}}
-  <hr />
 
   <div class='my-5'>
     <ol class='breadcrumb'>
@@ -176,17 +177,21 @@
     </div>
   {{/with}}
 
-  <div class='nav mt-5'>
-    {{#each footer}}
-      <div class='nav-item col-2'>
-        {{#each this}}
-          <a
-            href='{{link}}'
-            class='btn btn-link'
-          >{{text}}</a>
-        {{/each}}
+  <div class="row">
+      <div class='nav mt-5'>
+        {{#each footer}}
+        <div class='nav-item col-2 ms-4 '>
+          {{#each this}}
+            <div>
+              <a
+              href='{{link}}'
+              class='btn btn-link'
+            >{{text}}</a>
+            </div>
+          {{/each}}
+        </div>
+      {{/each}}
       </div>
-    {{/each}}
-  </div>
+   </div>
 
 </main>

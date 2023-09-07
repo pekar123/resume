@@ -1,17 +1,17 @@
-<div>
-  <main class='p-5'>
-    {{#with web}}
-      <h1>Languages</h1>
-      {{#each languages}}
-        <section>
-          <hr />
-          <div>
-            <p><b>Name:</b> {{name}}</p>
-            <p><b>Version:</b> {{version}}</p>
-            <p><b>Description:</b> {{description}}</p>
-          </div>
-        </section>
+<main class='p-5'>
+  {{#with web}}
+    <h1>Languages</h1>
+    {{#each languages}}
+      <section>
+        <hr />
+        <div class='card p-3 my-3 text-bg-primary'>
+          <p><b>Name:</b> {{name}}</p>
+          <p><b>Version:</b> {{version}}</p>
+          <p><b>Description:</b> {{description}}</p>
+        </div>
+      </section>
 
+      <div class='p-3 card text-bg-dark'>
         {{#each elements}}
           <div>
             <hr />
@@ -80,9 +80,9 @@
             {{/each}}
           </div>
         {{/each}}
+      </div>
 
-      {{/each}}
+    {{/each}}
 
-    {{/with}}
-  </main>
-</div>
+  {{/with}}
+</main>
